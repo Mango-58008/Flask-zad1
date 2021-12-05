@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <!-- loan -->
+    <div>
+        <form class="client_form" method="post" action="#">
+            <label>Client</label><br>
+            <select name="selected_client">
+            {% for client in clients %}
+                <option value="{{ client._id }}">{{ client._full_name }}</option>
+            {% endfor %}
+            </select>
+            <br>
+            <label>Book</label><br>
+            <select name="selected_book">
+            {% for book in books %}
+                <option value="{{ book._id }}">{{ book.name }}</option>
+            {% endfor %}
+            </select>
+            <button type="submit" name="submit" value="client">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
